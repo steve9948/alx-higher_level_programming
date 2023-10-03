@@ -1,0 +1,25 @@
+#include "lists.h"
+
+/**
+* check_cycle - Verifies if the singly linked contains a cycle.
+* @list: linked list o be checked
+*
+* Return: 0 if no cycle found, 1 if cycle is found
+*/
+int check_cycle(listint_t *list)
+{
+	listint_t *current = malloc(sizeof(listint_t));
+
+	current = list;
+	while (current != NULL)
+	{
+		if (current->next == list)
+		{
+			free(current);
+			return (1);
+		}
+		current = current->next;
+	}
+	free(current);
+	return (0);
+}
