@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-'''A function that prints the first x elements of a list and only intagers'''
+import sys
+
 def safe_print_list_integers(my_list=[], x=0):
-      try:
-        print("{:d}".format(value))
-    except (ValueError, TypeError) as err:
+    count = 0
+    try:
+        for i in range(x):
+            if isinstance(my_list[i], int):
+                print("{:d}".format(my_list[i]), end=" ")
+                count += 1
+    except (IndexError, TypeError) as err:
         print("Exception: {}".format(err), file=sys.stderr)
-        return False
+        return count
     else:
-        return True
+        print()
+        return count
 
