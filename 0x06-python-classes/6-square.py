@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""class Square """
+""" class Square """
 
 
 class Square():
     """
-        Square: the definition of the square.
+        Square: defines a square.
         Attributes:
             size (int): size of square.
             position(int tuple): position of square.
         Method:
-                __init__ : init of size for each instance.
+                __init__ : init of size attribute for each instance.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -29,7 +29,7 @@ class Square():
 
     @property
     def size(self):
-        """ getter for  private attribute size.
+        """ getter for private attribute size.
             Returns:
                 size.
         """
