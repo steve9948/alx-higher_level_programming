@@ -1,17 +1,20 @@
 #!/usr/bin/python3
-"""class Square """
+""" module contains: class Square """
+
 
 class Square:
     """
         Square: defines a square
-            size: size of square
+        Attributes:
+            size (no type or value identification): size of square
         Method:
-            __init__: init of the size attribute of each instance
+            __init__: init of size attribute for each instance
     """
 
     def __init__(self, size=0):
         """ Initialization of attributes for instances
-                size: size of the square (int)
+            Args:
+                size (int): size of the square
         """
         if (isinstance(size, int)):
             self.__size = size
