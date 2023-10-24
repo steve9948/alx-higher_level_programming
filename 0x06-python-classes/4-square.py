@@ -1,28 +1,31 @@
 #!/usr/bin/python3
-"""class Square """
+""" class Square """
+
 
 class Square:
     """
         Square: defines a square
-            size: size of square
+        Attributes:
+            size (int): size of square
         Method:
-            __init__: init of the size attribute of each instance
+            __init__: Initializes size for all instances
     """
 
     def __init__(self, size=0):
         """ Initialization of attributes for instances
-                size: size of the square (int)
+            Args:
+                size (int): size of the square.
         """
         if (isinstance(size, int)):
             self.__size = size
             if size < 0:
-                raise ValueError('size must be >= 0')
+                raise ValueError("size must be >= 0")
         else:
-            raise TypeError('size must be an integer')
+            raise TypeError("size must be an integer")
 
     @property
     def size(self):
-        """ getter to private attribute size
+        """ getter to for private attribute size
             Return:
                 size of the square
         """
@@ -44,6 +47,6 @@ class Square:
 
     def area(self):
         """
-             Square`s area.
+             area of the square.
         """
         return self.__size * self.__size
