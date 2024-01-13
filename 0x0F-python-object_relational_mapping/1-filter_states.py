@@ -38,3 +38,4 @@ if __name__ == '__main__':
 
     '''Terminate connection to DB'''
     mydb.close()
+
